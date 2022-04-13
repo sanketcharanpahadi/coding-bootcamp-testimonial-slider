@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital@0;1&family=Inter:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-dark-blue: hsl(240, 38%, 20%);
+  --color-primary-grayish-blue: hsl(240, 18%, 77%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url(images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: bottom left;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.person-img {
+  position: relative;
+  background-image: url(images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  padding: 5rem 0rem;
+  background-position: 15px 22px;
+}
+
+.person-image {
+  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0.5rem 5rem 40px -2.5rem rgba(32, 32, 70, 0.2);
+  border-radius: 5px;
+}
+
+.slider {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  z-index: 2;
+  display: flex;
+  gap: 3rem;
+  border-radius: 20px;
+  padding: 1.3rem 1.5rem;
+  top: 77%;
+}
+
+.slider img {
+  width: 9px;
+  cursor: pointer;
+}
+
+.testimonial {
+  position: relative;
+  /* margin-bottom: 12rem; */
+}
+
+.testimony {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #202046;;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  opacity: 0.6;
+}
+
+.quote {
+  position: absolute;
+  left: 50%;
+  width: 5.5rem;
+  transform: translateX(-50%);
+  top: -15%;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.person-name {
+  color: var(--color-primary-dark-blue);
+  font-size: 1.5rem;
+}
+
+.person-role {
+  color: var(--color-primary-grayish-blue);
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-size: 50%;
+    padding: 5rem 0;
+  }
+
+  .container {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+
+  .person-img {
+    width: 76%;
+    background-position: 50px -10px;
+    padding: 5rem 0rem;
+  }
+
+
+  .testimonial {
+    width: 50%;
+    padding-left: 6.3rem;
+  }
+
+  .testimony {
+    text-align: left;
+    font-size: 3rem;
+    margin-right: -18rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .person {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .person-name,
+  .person-role {
+    font-size: 2rem;
+  }
+
+  .quote {
+    top: -20%;
+    left: 45%;
+    width: 10rem;
+  }
+
+  .slider {
+    top: 86.5%;
+    left: 30%;
+    padding: 1.7rem 2rem;
+    gap: 5rem;
+    border-radius: 3rem;
+  }
+
+  .slider img {
+      width: 13px;
+  }
+}
